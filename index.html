@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Bakery & Confectionery | Fresh Cakes | Chennai</title>
+  <meta name="description"
+    content="Fresh baked cakes & desserts delivered in Chennai. Order premium cakes, pastries & treats online.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="gallery/logo-main.png">
+  <link rel="apple-touch-icon" href="gallery/logo-main.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOGO LOADER -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-inner">
+      <img src="gallery/logo-main.png" alt="City Bakery Logo" class="loader-logo">
+      <div class="loader-name">City Bakery</div>
+      <div class="loader-sub">& Confectionery</div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCATION POPUP -->
+  <div id="locationPopup" class="location-popup-overlay">
+    <div class="location-popup">
+      <div class="popup-header">
+        <img src="gallery/logo-main.png" alt="City Bakery Logo" class="popup-logo-img">
+        <h2>Select Your Location</h2>
+        <p>Choose your nearest branch for the best delivery experience</p>
+      </div>
+      <button class="btn-gps" onclick="useCurrentLocation()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M12 1v4M12 19v4M1 12h4M19 12h4" />
+          <circle cx="12" cy="12" r="9" stroke-dasharray="3 2" />
+        </svg>
+        Use Current Location
+      </button>
+      <div class="popup-divider"><span>OR SELECT A BRANCH</span></div>
+      <div class="branch-list">
+        <div class="branch-option" onclick="selectBranch('Neelankarai')">
+          <img src="gallery/logo-main.png" alt="Neelankarai Branch" class="branch-img">
+          <div><strong>Neelankarai</strong><span>3/462, Pandiyan Salai, Chennai — 600115</span></div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </div>
+        <div class="branch-option" onclick="selectBranch('Kottivakkam')">
+          <img src="gallery/logo-main.png" alt="Kottivakkam Branch" class="branch-img">
+          <div><strong>Kottivakkam</strong><span>OMR Road, Kottivakkam, Chennai — 600041</span></div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </div>
+        <div class="branch-option" onclick="selectBranch('Injambakkam')">
+          <img src="gallery/logo-main.png" alt="Injambakkam Branch" class="branch-img">
+          <div><strong>Injambakkam</strong><span>ECR Road, Injambakkam, Chennai — 600115</span></div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </div>
+        <div class="branch-option" onclick="selectBranch('Kandhanchavadi')">
+          <img src="gallery/logo-main.png" alt="Kandhanchavadi Branch" class="branch-img">
+          <div><strong>Kandhanchavadi</strong><span>Kandhanchavadi, Chennai</span></div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="header-top">
+      <div class="container header-inner">
+        <div class="header-left">
+          <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="#home" class="logo">
+            <img src="gallery/logo-main.png" alt="City Bakery & Confectionery Logo" class="logo-img">
+            <div class="logo-text">
+              <span class="logo-name">City Bakery</span>
+              <span class="logo-sub">&amp; Confectionery</span>
+            </div>
+          </a>
+        </div>
+        <nav class="nav-main" id="navMain">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#products" class="nav-link">Menu</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#branches" class="nav-link">Branches</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#products" class="nav-link nav-cta">Order Online</a>
+        </nav>
+        <div class="header-right">
+          <div class="location-selector" onclick="toggleLocationDropdown()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span id="selectedBranchLabel">Neelankarai</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+            <div class="location-dropdown" id="locationDropdown">
+              <div class="loc-item" onclick="changeBranch(event,'Neelankarai')">Neelankarai</div>
+              <div class="loc-item" onclick="changeBranch(event,'Kottivakkam')">Kottivakkam</div>
+              <div class="loc-item" onclick="changeBranch(event,'Injambakkam')">Injambakkam</div>
+              <div class="loc-item" onclick="changeBranch(event,'Kandhanchavadi')">Kandhanchavadi</div>
+            </div>
+          </div>
+          <button class="search-btn" onclick="toggleSearch()" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <button class="cart-btn" onclick="toggleCart()" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar-container" id="searchBarContainer">
+      <div class="container">
+        <div class="search-inner">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search for cakes, pastries..." autocomplete="off"
+            oninput="handleSearch(this.value)">
+          <button onclick="toggleSearch()" class="search-close">✕</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileMenu()"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="logo-name">City Bakery</span>
+      <button onclick="closeMobileMenu()">✕</button>
+    </div>
+    <div class="mobile-branch">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+      <span id="mobileBranchLabel">Neelankarai</span>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#products" onclick="closeMobileMenu()">Menu</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#branches" onclick="closeMobileMenu()">Branches</a>
+      <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <a href="#custom" onclick="closeMobileMenu()">Custom Cake</a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <a href="tel:+917373730309" class="mobile-call-btn">Call Us: +91 96299 36178</a>
+      <a href="https://wa.me/917373730309" class="mobile-wa-btn" target="_blank">WhatsApp Order</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-since">Since 2015</div>
+        <h1 class="hero-title">
+          City Bakery<br>
+          <span class="hero-accent">&amp; Confectionery</span>
+        </h1>
+        <p class="hero-desc">City Bakery and Confectionery has been spreading sweetness and joy with freshly baked
+          delights. Cakes, pastries, and treats made with love and quality you can taste!</p>
+        <!-- Mobile-only collage -->
+        <div class="mobile-hero-collage">
+          <div class="mh-badge mh-badge-1">⭐ Best Seller</div>
+          <img src="gallery/gallery1.jpg" class="mh-main" alt="Best seller cake">
+          <img src="gallery/gallery10.jpg" class="mh-small mh-small-1" alt="Cake">
+          <img src="gallery/gallery4.jpg" class="mh-small mh-small-2" alt="Cake">
+          <div class="mh-badge mh-badge-2">✦ Fresh Daily</div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#products" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+            </svg>
+            Order Online
+          </a>
+          <a href="#custom" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            Custom Cake
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>33+</strong><span>Varieties</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><strong>4</strong><span>Branches</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><strong>10K+</strong><span>Happy Customers</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-collage" aria-label="Featured cake collection">
+          <div class="hero-glow"></div>
+          <div class="collage-badge badge-best">⭐ Best Seller</div>
+          <div class="collage-badge badge-custom">🎂 Custom Orders</div>
+          <div class="collage-badge badge-fresh">✦ Fresh Daily</div>
+          <img src="gallery/gallery1.jpg" alt="Best seller celebration cake" class="collage-img collage-main"
+            loading="lazy">
+          <img src="gallery/gallery15.jpeg" alt="Colourful birthday cake" class="collage-img collage-top"
+            loading="lazy">
+          <img src="gallery/gallery4.jpg" alt="Red velvet custom cake" class="collage-img collage-bottom"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK INFO BAR -->
+  <div class="info-bar">
+    <div class="container info-bar-inner">
+      <div class="info-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-7 9h9a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2z" />
+        </svg>
+        <span><strong>Delivery</strong> Across Chennai</span>
+      </div>
+      <div class="info-sep"></div>
+      <div class="info-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <span><strong>100% Fresh</strong> Quality Ingredients</span>
+      </div>
+      <div class="info-sep"></div>
+      <div class="info-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+        <span><strong>Same Day</strong> Cake Delivery</span>
+      </div>
+      <div class="info-sep"></div>
+      <div class="info-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 0 2 2z" />
+        </svg>
+        <span><strong>Custom Cakes</strong> For Every Occasion</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="products-header">
+        <div class="section-header">
+          <div class="section-label">Our Full Menu</div>
+          <h2 class="section-title">All <span>Products</span></h2>
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" onclick="filterTab(this,'all')">All</button>
+          <button class="filter-tab" onclick="filterTab(this,'fresh-cream')">Fresh Cream</button>
+          <button class="filter-tab" onclick="filterTab(this,'premium')">Premium</button>
+          <button class="filter-tab" onclick="filterTab(this,'chocolate')">Chocolate</button>
+          <button class="filter-tab" onclick="filterTab(this,'butter-cream')">Butter Cream</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="load-more-wrap">
+        <button class="btn-load-more" id="loadMoreBtn" onclick="loadMore()">Load More Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="bestsellers-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Customer Favourites</div>
+        <h2 class="section-title">Best <span>Sellers</span></h2>
+      </div>
+      <div class="products-grid" id="bestSellersGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section" id="about">
+    <div class="container">
+      <div class="why-layout">
+        <div class="why-copy">
+          <div class="section-label">Our Promise</div>
+          <h2 class="section-title">Why Choose <span>City Bakery</span></h2>
+          <p class="section-sub">Every order is prepared with careful planning, consistent quality and clean
+            presentation — from daily treats to celebration cakes.</p>
+          <a href="#products" class="btn-secondary why-btn">Explore Menu</a>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-num">01</div>
+            <h3>Freshly Prepared</h3>
+            <p>Cakes and bakery items are prepared in fresh batches so every order tastes soft, rich and reliable.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">02</div>
+            <h3>Neat Product Finish</h3>
+            <p>From simple cream cakes to custom designs, we focus on clean finishing and celebration-ready
+              presentation.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">03</div>
+            <h3>Clear Order Support</h3>
+            <p>Customers can check availability, share references and confirm details through call or WhatsApp before
+              ordering.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">04</div>
+            <h3>Trusted Since 2015</h3>
+            <p>Serving customers across Chennai with consistent taste, friendly service and cakes for every occasion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Our Creations</div>
+        <h2 class="section-title">Cake <span>Gallery</span></h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    </div>
+  </div>
+
+  <!-- CUSTOM CAKE -->
+  <section class="custom-section" id="custom">
+    <div class="container">
+      <div class="custom-inner">
+        <div class="custom-text">
+          <div class="section-label">Made Just For You</div>
+          <h2 class="section-title">Custom <span>Cake Orders</span></h2>
+          <p>Turn your dream cake into reality. Photo cakes, theme cakes, wedding cakes — we craft it all with love.
+            Share your idea and we'll make it happen!</p>
+          <ul class="custom-features">
+            <li>✓ Photo Cakes (any size)</li>
+            <li>✓ Theme &amp; Character Cakes</li>
+            <li>✓ Wedding &amp; Anniversary Cakes</li>
+            <li>✓ Corporate &amp; Event Cakes</li>
+            <li>✓ Fondant &amp; Sugar Craft</li>
+            <li>✓ Free Message Writing</li>
+          </ul>
+        </div>
+        <div class="custom-form">
+          <h3>Design Your Cake</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" id="customName">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" id="customPhone">
+          </div>
+          <div class="form-group">
+            <label>Cake Type / Theme</label>
+            <select id="customType">
+              <option value="">Select theme...</option>
+              <option>Photo Cake</option>
+              <option>Birthday Cake</option>
+              <option>Wedding Cake</option>
+              <option>Anniversary Cake</option>
+              <option>Character/Theme Cake</option>
+              <option>Corporate Cake</option>
+              <option>Pinata Cake</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Weight Required</label>
+            <select id="customWeight">
+              <option value="">Select weight...</option>
+              <option>500gm</option>
+              <option>1 Kg</option>
+              <option>1.5 Kg</option>
+              <option>2 Kg</option>
+              <option>2.5 Kg</option>
+              <option>3 Kg+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Delivery Date</label>
+            <input type="date" id="customDate">
+          </div>
+          <div class="form-group">
+            <label>Message / Special Instructions</label>
+            <textarea placeholder="Describe your cake idea, message to write on cake, any specific design..."
+              id="customMsg" rows="3"></textarea>
+          </div>
+          <button class="btn-primary full-width" onclick="submitCustomOrder()">Send Custom Order Request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">💬 Customer Reviews</div>
+        <h2 class="section-title">What Customers <span>Say</span></h2>
+      </div>
+      <div class="testimonials-carousel" id="testimonialsCarousel">
+        <div class="testimonials-track" id="testimonialsTrack"></div>
+      </div>
+      <div class="carousel-dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section class="branches-section" id="branches">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">📍 Find Us Near You</div>
+        <h2 class="section-title">Our <span>Branches</span></h2>
+      </div>
+      <div class="branches-grid">
+        <div class="branch-card">
+          <div class="branch-header">
+            <div class="branch-num">01</div>
+            <h3>Neelankarai</h3>
+          </div>
+          <div class="branch-body">
+            <p class="branch-addr">📍 3/462, Pandiyan Salai, Neelankarai, Chennai — 600115</p>
+            <p class="branch-hours">🕐 9:00 AM — 10:00 PM (All Days)</p>
+            <p class="branch-phone">📞 +91 96299 36178</p>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Neelankarai+Chennai" target="_blank" class="branch-btn">📍 View Map</a>
+            <a href="https://wa.me/917373730309?text=Hi! I want to order from Neelankarai branch." target="_blank"
+              class="branch-btn branch-btn-primary">Order Now</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="branch-header">
+            <div class="branch-num">02</div>
+            <h3>Kottivakkam</h3>
+          </div>
+          <div class="branch-body">
+            <p class="branch-addr">📍 OMR Road, Kottivakkam, Chennai — 600041</p>
+            <p class="branch-hours">🕐 9:00 AM — 10:00 PM (All Days)</p>
+            <p class="branch-phone">📞 +91 96299 36178</p>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Kottivakkam+Chennai+OMR" target="_blank" class="branch-btn">📍 View
+              Map</a>
+            <a href="https://wa.me/917373730309?text=Hi! I want to order from Kottivakkam branch." target="_blank"
+              class="branch-btn branch-btn-primary">Order Now</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="branch-header">
+            <div class="branch-num">03</div>
+            <h3>Injambakkam</h3>
+          </div>
+          <div class="branch-body">
+            <p class="branch-addr">📍 ECR Road, Injambakkam, Chennai — 600115</p>
+            <p class="branch-hours">🕐 9:00 AM — 10:00 PM (All Days)</p>
+            <p class="branch-phone">📞 +91 96299 36178</p>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Injambakkam+ECR+Chennai" target="_blank" class="branch-btn">📍 View
+              Map</a>
+            <a href="https://wa.me/917373730309?text=Hi! I want to order from Injambakkam branch." target="_blank"
+              class="branch-btn branch-btn-primary">Order Now</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="branch-header">
+            <div class="branch-num">04</div>
+            <h3>Kandhanchavadi</h3>
+          </div>
+          <div class="branch-body">
+            <p class="branch-addr">📍 Veeramani Salai, Kandanchavadi,Perungudi, Chennai.</p>
+            <p class="branch-hours">🕐 9:00 AM — 10:00 PM (All Days)</p>
+            <p class="branch-phone">📞 +91 96299 36178</p>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Kandhanchavadi+Chennai" target="_blank" class="branch-btn">📍 View
+              Map</a>
+            <a href="https://wa.me/917373730309?text=Hi! I want to order from Kandhanchavadi branch." target="_blank"
+              class="branch-btn branch-btn-primary">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="section-header">
+          <div class="section-label">❓ Got Questions?</div>
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>How do I place an order?</span><svg class="faq-icon"
+                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></button>
+            <div class="faq-a">Browse our products, add items to your cart, and place your order via WhatsApp. Our team
+              will confirm your order within minutes.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>What is the minimum order quantity?</span><svg
+                class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></button>
+            <div class="faq-a">We accept orders starting from 500gm for most cakes. Custom/design cakes require a
+              minimum of 1kg.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>Can I customize a cake?</span><svg class="faq-icon"
+                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></button>
+            <div class="faq-a">Absolutely! We offer photo cakes, design cakes, shape cakes, fondant shapes, and more.
+              Add these as extras to your order.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>Can I customize a cake with a photo?</span><svg
+                class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></button>
+            <div class="faq-a">Absolutely! We specialize in photo cakes, themed cakes, fondant designs, and fully custom
+              creations. Share your idea via WhatsApp and we'll create something amazing.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>What payment methods do you accept?</span><svg
+                class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></button>
+            <div class="faq-a">We accept UPI (GPay, PhonePe, Paytm), Net Banking, Credit/Debit cards, and Cash on
+              Delivery.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-panel">
+        <div class="contact-main">
+          <div class="section-label">Contact Us</div>
+          <h2 class="section-title">Let us help with your <span>cake order</span></h2>
+          <p class="section-sub">For custom cakes, bulk orders, birthday cakes or delivery details, contact the nearest
+            City Bakery branch.</p>
+          <div class="contact-actions">
+            <a href="tel:+917373730309" class="btn-primary">Call Now</a>
+            <a href="https://wa.me/917373730309" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div class="contact-line"><span>Phone</span><a href="tel:+917373730309">+91 96299 36178</a></div>
+          <div class="contact-line"><span>WhatsApp</span><a href="https://wa.me/917373730309" target="_blank">Chat with
+              us</a></div>
+          <div class="contact-line"><span>Working Hours</span><strong>9:00 AM — 10:00 PM, All Days</strong></div>
+          <div class="contact-line"><span>Instagram</span><a
+              href="https://www.instagram.com/citybakery_confectionery?igsh=aXNpbHVsbmIxcHk3"
+              target="_blank">@citybakery</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="gallery/logo-main.png" alt="City Bakery Logo" class="footer-logo-img">
+            <div>
+              <div class="logo-name">City Bakery</div>
+              <div class="logo-sub">& Confectionery</div>
+            </div>
+          </div>
+          <p>Fresh Baked Delights for every occasion. Premium cakes, pastries & desserts made with love since 2015.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/citybakery_confectionery?igsh=aXNpbHVsbmIxcHk3" target="_blank"
+              class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/917373730309" target="_blank" class="social-link" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+              </svg>
+            </a>
+            <a href="tel:+917373730309" class="social-link" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Menu</a></li>
+            <li><a href="#custom">Custom Cakes</a></li>
+            <li><a href="#branches">Our Branches</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#products">Fresh Cream Cakes</a></li>
+            <li><a href="#products">Chocolate Cakes</a></li>
+            <li><a href="#products">Premium Cakes</a></li>
+            <li><a href="#products">Butter Cream Cakes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Order Support</h4>
+          <ul>
+            <li><a href="tel:+917373730309">Call: +91 7373730309</a></li>
+            <li><a href="https://wa.me/917373730309" target="_blank">WhatsApp Ordering</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#branches">Branch Details</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 City Bakery & Confectionery. All rights reserved. | Designed in Chennai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="toggleCart()" class="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <div style="font-size:3rem;">🛒</div>
+        <p>Your cart is empty</p>
+        <a href="#products" onclick="toggleCart()" class="btn-primary" style="margin-top:1rem;">Browse Menu</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total"><span>Subtotal:</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn-primary full-width" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      <button class="btn-whatsapp full-width" style="margin-top:0.75rem" onclick="orderViaWhatsApp()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+        </svg>
+        Quick Order via WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-modal">
+      <div class="checkout-header">
+        <h3>Complete Your Order</h3>
+        <button onclick="closeCheckout()" class="checkout-close">✕</button>
+      </div>
+      <div class="checkout-body">
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <div class="checkout-form">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" id="coName" placeholder="Your name">
+            </div>
+            <div class="form-group"><label>Phone *</label><input type="tel" id="coPhone" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Delivery Type</label>
+            <div class="delivery-options">
+              <label class="delivery-opt"><input type="radio" name="deliveryType" value="home" checked
+                  onchange="toggleAddressField(this)"> 🚚 Home Delivery</label>
+              <label class="delivery-opt"><input type="radio" name="deliveryType" value="pickup"
+                  onchange="toggleAddressField(this)"> 🏪 Store Pickup</label>
+            </div>
+          </div>
+          <div class="form-group" id="addressFieldGroup">
+            <label>Delivery Address *</label>
+            <textarea id="coAddress" placeholder="Full address with landmark" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Nearest Branch</label>
+            <select id="coBranch">
+              <option>Neelankarai — 3/462, Pandiyan Salai</option>
+              <option>Kottivakkam — OMR Road</option>
+              <option>Injambakkam — ECR Road</option>
+              <option>Kandhanchavadi</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Delivery Date *</label><input type="date" id="coDate"></div>
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <select id="coTime">
+                <option>9:00 AM - 11:00 AM</option>
+                <option>11:00 AM - 1:00 PM</option>
+                <option>1:00 PM - 3:00 PM</option>
+                <option>3:00 PM - 5:00 PM</option>
+                <option>5:00 PM - 7:00 PM</option>
+                <option>7:00 PM - 10:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Cake Message / Special Instructions</label><input type="text" id="coMessage"
+              placeholder="Happy Birthday [Name]! or any special request..."></div>
+          <div class="checkout-total-bar"><span>Total Amount:</span><strong id="checkoutTotal">₹0</strong></div>
+          <button class="btn-whatsapp full-width" onclick="placeOrderWhatsApp()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+            Place Order via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="product-modal-overlay" id="productModalOverlay" onclick="closeProductModal()">
+    <div class="product-modal" id="productModal" onclick="event.stopPropagation()">
+      <button class="product-modal-close" onclick="closeProductModal()">✕</button>
+      <div class="product-modal-inner" id="productModalInner"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <div class="mobile-bottom-bar">
+    <a href="#home" class="mbb-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#products" class="mbb-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+        <line x1="7" y1="7" x2="7.01" y2="7" />
+      </svg>
+      <span>Menu</span>
+    </a>
+    <button class="mbb-item mbb-cart" onclick="toggleCart()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+      </svg>
+      <span class="mbb-badge" id="mbbBadge">0</span>
+    </button>
+    <a href="https://wa.me/917373730309" target="_blank" class="mbb-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+917373730309" class="mbb-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>Call</span>
+    </a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
