@@ -13,33 +13,33 @@ const ADDONS = [
 /* ========== PRODUCT DATA ========== */
 const PRODUCTS = [
   // FRESH CREAM
-  { id: 1, name: 'Strawberry Cake', cat: 'fresh-cream', desc: 'Fresh cream with luscious strawberries', img: 'gallery/Strawberry Cake.jpg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }], badge: 'Popular' },
-  { id: 2, name: 'Mango Cream Cake', cat: 'fresh-cream', desc: 'Tropical mango with fresh cream layers', img: 'gallery/Mango Cream Cake.jpg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
-  { id: 3, name: 'Blueberry Cake', cat: 'fresh-cream', desc: 'Bursting blueberries in silky cream', img: 'gallery/Blueberry Cake.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
-  { id: 4, name: 'Butterscotch Cake', cat: 'fresh-cream', desc: 'Classic butterscotch with nutty crunch', img: 'gallery/Butterscotch Cake.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
-  { id: 5, name: 'Rasamalai Cake', cat: 'fresh-cream', desc: 'Unique fusion of rasamalai & cream', img: 'gallery/Rasamalai Cake.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
-  { id: 6, name: 'Mixed Fruit Cake', cat: 'fresh-cream', desc: 'Seasonal fresh fruits on cream base', img: 'gallery/Mixed Fruit Cake.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
-  { id: 7, name: 'Vanilla Cream Cake', cat: 'fresh-cream', desc: 'Light, airy classic vanilla fresh cream', img: 'gallery/Vanilla Cream Cake.jpg', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
+  { id: 1, name: 'Strawberry Cake', cat: 'fresh-cream', desc: 'Fresh cream with luscious strawberries', img: 'gallery/Strawberry Cake.jpeg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }], badge: 'Popular' },
+  { id: 2, name: 'Mango Cream Cake', cat: 'fresh-cream', desc: 'Tropical mango with fresh cream layers', img: 'gallery/Mango Cream Cake.jpeg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
+  { id: 3, name: 'Blueberry Cake', cat: 'fresh-cream', desc: 'Bursting blueberries in silky cream', img: 'gallery/Blueberry Cake.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 4, name: 'Butterscotch Cake', cat: 'fresh-cream', desc: 'Classic butterscotch with nutty crunch', img: 'gallery/Butterscotch Cake.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
+  { id: 5, name: 'Rasamalai Cake', cat: 'fresh-cream', desc: 'Unique fusion of rasamalai & cream', img: 'gallery/Rasamalai Cake.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 6, name: 'Mixed Fruit Cake', cat: 'fresh-cream', desc: 'Seasonal fresh fruits on cream base', img: 'gallery/Mixed Fruit Cake.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 7, name: 'Vanilla Cream Cake', cat: 'fresh-cream', desc: 'Light, airy classic vanilla fresh cream', img: 'gallery/Vanilla Cream Cake.jpeg', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
 
   // PREMIUM
-  { id: 8, name: 'White Forest Cake', cat: 'premium', desc: 'White chocolate with cherries & cream', img: 'gallery/White Forest Cake.jpg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
-  { id: 9, name: 'Red Velvet Cake', cat: 'premium', desc: 'Iconic red velvet with cream cheese frosting', img: 'gallery/Red Velvet Cake.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Premium' },
-  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.jpg', prices: [{ label: '500gm', val: 450 }, { label: '1kg', val: 900 }], badge: 'Special' },
-  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.jpg', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
+  { id: 8, name: 'White Forest Cake', cat: 'premium', desc: 'White chocolate with cherries & cream', img: 'gallery/White Forest Cake.jpeg', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
+  { id: 9, name: 'Red Velvet Cake', cat: 'premium', desc: 'Iconic red velvet with cream cheese frosting', img: 'gallery/Red Velvet Cake.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Premium' },
+  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.jpeg', prices: [{ label: '500gm', val: 450 }, { label: '1kg', val: 900 }], badge: 'Special' },
+  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.jpeg', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
 
   // CHOCOLATE
-  { id: 12, name: 'Choco Scotch', cat: 'chocolate', desc: 'Chocolate meets butterscotch heaven', img: 'gallery/Choco Scotch.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
-  { id: 13, name: 'Choco Fudge Cake', cat: 'chocolate', desc: 'Dense, rich chocolate fudge layers', img: 'gallery/Choco Fudge Cake.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Fav' },
-  { id: 14, name: 'Brownie Blast Cake', cat: 'chocolate', desc: 'Fudgy brownie chunks in every bite', img: 'gallery/Brownie Blast Cake.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 12, name: 'Choco Scotch', cat: 'chocolate', desc: 'Chocolate meets butterscotch heaven', img: 'gallery/Choco Scotch.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 13, name: 'Choco Fudge Cake', cat: 'chocolate', desc: 'Dense, rich chocolate fudge layers', img: 'gallery/Choco Fudge Cake.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Fav' },
+  { id: 14, name: 'Brownie Blast Cake', cat: 'chocolate', desc: 'Fudgy brownie chunks in every bite', img: 'gallery/Brownie Blast Cake.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
   { id: 15, name: 'Choco Dry Fruit & Nuts', cat: 'chocolate', desc: 'Chocolate packed with premium nuts', img: 'gallery/Choco Dry Fruit & Nuts.jpg', prices: [{ label: '500gm', val: 450 }, { label: '1kg', val: 900 }], badge: 'Premium' },
-  { id: 16, name: 'Choco Truffle', cat: 'chocolate', desc: 'Silky smooth chocolate truffle ganache', img: 'gallery/Choco Truffle.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
-  { id: 17, name: 'Choco Mango', cat: 'chocolate', desc: 'Chocolate & mango tropical fusion', img: 'gallery/Choco Mango.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
-  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
-  { id: 19, name: 'Choco Oreo', cat: 'chocolate', desc: 'Chocolate cake crowned with Oreos', img: 'gallery/Choco Oreo.jpg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
-  { id: 20, name: 'Choco Kit Kat', cat: 'chocolate', desc: 'Wrapped in Kit Kat bars all around', img: 'gallery/Choco Kit Kat.jpg', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 950 }], badge: 'Trending' },
-  { id: 21, name: 'Choco Cashew Overloaded', cat: 'chocolate', desc: 'Loaded with cashews & chocolate', img: 'gallery/Choco Cashew Overloaded.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
-  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.jpg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
-  { id: 23, name: 'Pinata Cake', cat: 'special', desc: 'Surprise-filled cake for extra fun!', img: 'gallery/Pinata Cake.jpg', prices: [{ label: '500gm', val: 600 }, { label: '1kg', val: 1200 }], badge: 'Hit!' },
+  { id: 16, name: 'Choco Truffle', cat: 'chocolate', desc: 'Silky smooth chocolate truffle ganache', img: 'gallery/Choco Truffle.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 17, name: 'Choco Mango', cat: 'chocolate', desc: 'Chocolate & mango tropical fusion', img: 'gallery/Choco Mango.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 19, name: 'Choco Oreo', cat: 'chocolate', desc: 'Chocolate cake crowned with Oreos', img: 'gallery/Choco Oreo.jpeg', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
+  { id: 20, name: 'Choco Kit Kat', cat: 'chocolate', desc: 'Wrapped in Kit Kat bars all around', img: 'gallery/Choco Kit Kat.jpeg', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 950 }], badge: 'Trending' },
+  { id: 21, name: 'Choco Cashew Overloaded', cat: 'chocolate', desc: 'Loaded with cashews & chocolate', img: 'gallery/Choco Cashew Overloaded.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.jpeg', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 23, name: 'Pinata Cake', cat: 'special', desc: 'Surprise-filled cake for extra fun!', img: 'gallery/pinata.jpeg', prices: [{ label: '500gm', val: 600 }, { label: '1kg', val: 1200 }], badge: 'Hit!' },
 
   // BUTTER CREAM
   { id: 24, name: 'Vanilla Butter Cream', cat: 'butter-cream', desc: 'Classic vanilla with silky butter cream', img: 'gallery/Vanilla Butter Cream.jpg', prices: [{ label: '1kg', val: 400 }] },
@@ -58,24 +58,24 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_IMGS = [
-  'gallery/gallery1.jpg',
-  'gallery/gallery2.jpg',
+  'gallery/gallery1.png',
+  'gallery/gallery2.png',
   'gallery/gallery3.png',
-  'gallery/gallery4.jpg',
-  'gallery/gallery5.jpg',
+  'gallery/gallery4.jpeg',
+  'gallery/gallery5.png',
   'gallery/gallery6.png',
-  'gallery/gallery7.jpg',
-  'gallery/gallery8.jpg',
-  'gallery/gallery9.jpg',
-  'gallery/gallery10.jpg',
-  'gallery/gallery11.jpg',
-  'gallery/gallery12.jpg',
-  'gallery/gallery13.jpg',
-  'gallery/gallery14.jpeg',
-  'gallery/gallery15.jpeg',
-  'gallery/gallery16.jpeg',
-  'gallery/gallery17.jpeg',
-  'gallery/gallery18.jpeg'
+  'gallery/gallery7.png',
+  'gallery/gallery8.png',
+  'gallery/gallery9.png',
+  'gallery/gallery10.png',
+  'gallery/gallery11.png',
+  'gallery/gallery12.png',
+  'gallery/gallery13.png',
+  'gallery/gallery14.png',
+  'gallery/gallery15.png',
+  'gallery/gallery16.png',
+  'gallery/gallery17.png',
+  'gallery/gallery18.png'
 ];
 
 

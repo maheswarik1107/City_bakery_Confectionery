@@ -1514,3 +1514,110 @@ input, textarea, select, button { font-family: inherit; }
     display: none !important;
   }
 }
+/* MOBILE PRODUCT MODAL WIDTH FIX */
+@media (max-width: 768px) {
+  .product-modal {
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    margin: 10px auto !important;
+    padding: 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .modal-content,
+  .modal-body,
+  .modal-details {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .modal-grid {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .modal-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .addons-list,
+  .addon-section,
+  .customize-box {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .addon-item {
+    width: 100% !important;
+    grid-template-columns: 24px 1fr auto !important;
+    gap: 10px !important;
+  }
+
+  .modal-close {
+    right: 14px !important;
+    top: 14px !important;
+  }
+}
+/* COMPACT CUSTOMIZATION SECTION - MOBILE */
+@media (max-width: 768px) {
+
+  .addon-item {
+    padding: 10px 12px !important;
+    min-height: auto !important;
+    align-items: center !important;
+  }
+
+  .addon-item h4,
+  .addon-name {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+
+  .addon-item p,
+  .addon-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+  }
+
+  .addon-price {
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+  }
+
+  .customize-header {
+    padding: 12px !important;
+  }
+
+  .customize-header h3 {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .customize-header span {
+    font-size: 0.8rem !important;
+  }
+
+  .addon-checkbox {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+/* REDUCE MODAL HEIGHT - MOBILE */
+@media (max-width: 768px) {
+
+  .product-modal,
+  .modal-container,
+  .customize-modal {
+    max-height: 90vh !important;
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  .modal-content {
+    padding-bottom: 16px !important;
+  }
+}
