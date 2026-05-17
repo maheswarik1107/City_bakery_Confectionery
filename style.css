@@ -386,7 +386,7 @@ input, textarea, select, button { font-family: inherit; }
 .why-copy .section-sub { color: rgba(255,255,255,0.82); max-width: 460px; line-height: 1.8; }
 .why-btn { margin-top: 1.2rem; border-color: #fff; color: #fff; }
 .why-btn:hover { background: #fff; color: var(--primary); }
-.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.why-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px; }
 .why-num { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 800; color: #ffd1aa; margin-bottom: 8px; }
 .why-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 18px; backdrop-filter: blur(12px); color: #fff; transition: all 0.3s; }
 .why-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.16); }
