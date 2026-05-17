@@ -43,8 +43,8 @@ const PRODUCTS = [
 
   // BUTTER CREAM
   { id: 24, name: 'Vanilla Butter Cream', cat: 'butter-cream', desc: 'Classic vanilla with silky butter cream', img: 'gallery/Vanilla Butter Cream.webp', prices: [{ label: '1kg', val: 400 }] },
-  { id: 25, name: 'Chocolate Butter Cream', cat: 'butter-cream', desc: 'Rich chocolate butter cream delight', img: 'gallery/Chocolate Butter Cream.jpg', prices: [{ label: '1kg', val: 400 }] },
-  { id: 26, name: 'Butterscotch Butter Cream', cat: 'butter-cream', desc: 'Sweet butterscotch with creamy frosting', img: 'gallery/Butterscotch Butter Cream.webp', prices: [{ label: '1kg', val: 400 }] },
+  { id: 25, name: 'Chocolate Butter Cream', cat: 'butter-cream', desc: 'Rich chocolate butter cream delight', img: 'gallery/Chocolate Butter Cream.webp', prices: [{ label: '1kg', val: 400 }] },
+  { id: 26, name: 'Butterscotch Butter Cream', cat: 'butter-cream', desc: 'Sweet butterscotch with creamy frosting', img: 'gallery/Butterscotch Butter Cream.jpg', prices: [{ label: '1kg', val: 400 }] },
   { id: 27, name: 'Honey Cake', cat: 'butter-cream', desc: 'Drizzled with pure natural honey', img: 'gallery/Honey Cake.webp', prices: [{ label: '1kg', val: 600 }], badge: 'Special' },
 ];
 
