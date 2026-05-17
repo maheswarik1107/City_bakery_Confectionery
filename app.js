@@ -24,8 +24,8 @@ const PRODUCTS = [
   // PREMIUM
   { id: 8, name: 'White Forest Cake', cat: 'premium', desc: 'White chocolate with cherries & cream', img: 'gallery/White Forest Cake.webp', prices: [{ label: '500gm', val: 330 }, { label: '1kg', val: 650 }] },
   { id: 9, name: 'Red Velvet Cake', cat: 'premium', desc: 'Iconic red velvet with cream cheese frosting', img: 'gallery/Red Velvet Cake.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 870 }], badge: 'Premium' },
-  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 980}], badge: 'Special' },
-  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.webp', prices: [{ label: '500gm', val: 280}, { label: '1kg', val: 440 }] },
+  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 980 }], badge: 'Special' },
+  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.webp', prices: [{ label: '500gm', val: 280 }, { label: '1kg', val: 440 }] },
 
   // CHOCOLATE
   { id: 12, name: 'Choco Scotch', cat: 'chocolate', desc: 'Chocolate meets butterscotch heaven', img: 'gallery/Choco Scotch.webp', prices: [{ label: '500gm', val: 420 }, { label: '1kg', val: 830 }] },
@@ -34,11 +34,11 @@ const PRODUCTS = [
   { id: 15, name: 'Choco Dry Fruit & Nuts', cat: 'chocolate', desc: 'Chocolate packed with premium nuts', img: 'gallery/Choco Dry Fruit & Nuts.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 980 }], badge: 'Premium' },
   { id: 16, name: 'Choco Truffle', cat: 'chocolate', desc: 'Silky smooth chocolate truffle ganache', img: 'gallery/Choco Truffle.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
   { id: 17, name: 'Choco Mango', cat: 'chocolate', desc: 'Chocolate & mango tropical fusion', img: 'gallery/Choco Mango.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
-  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 950}] },
+  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 950 }] },
   { id: 19, name: 'Choco Oreo', cat: 'chocolate', desc: 'Chocolate cake crowned with Oreos', img: 'gallery/Choco Oreo.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }], badge: 'Bestseller' },
   { id: 20, name: 'Choco Kit Kat', cat: 'chocolate', desc: 'Wrapped in Kit Kat bars all around', img: 'gallery/Choco Kit Kat.webp', prices: [{ label: '500gm', val: 550 }, { label: '1kg', val: 1040 }], badge: 'Trending' },
   { id: 21, name: 'Choco Cashew Overloaded', cat: 'chocolate', desc: 'Loaded with cashews & chocolate', img: 'gallery/Choco Cashew Overloaded.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 880 }] },
-  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.webp', prices: [{ label: '500gm', val: 480}, { label: '1kg', val: 940 }], badge:'Bestseller' },
+  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.webp', prices: [{ label: '500gm', val: 480 }, { label: '1kg', val: 940 }], badge: 'Bestseller' },
   { id: 23, name: 'Pinata Cake', cat: 'special', desc: 'Surprise-filled cake for extra fun!', img: 'gallery/pinata.webp', prices: [{ label: '500gm', val: 700 }, { label: '1kg', val: 1400 }], badge: 'Hit!' },
 
   // BUTTER CREAM
@@ -77,7 +77,6 @@ const GALLERY_IMGS = [
   'gallery/gallery17.webp',
   'gallery/gallery18.webp'
 ];
-
 
 /* ========== STATE ========== */
 let cart = JSON.parse(localStorage.getItem('cb_cart') || '[]');
@@ -234,9 +233,11 @@ function productCardHTML(p) {
     'Hit!': 'badge-hit', 'Custom': 'badge-custom'
   };
   const badgeClass = badgeClassMap[p.badge] || 'badge-popular';
+
   const sizeButtons = p.prices.length > 1
     ? `<div class="product-sizes">${p.prices.map((s, i) => `<button class="size-btn${i === 0 ? ' active' : ''}" onclick="selectSize(this, ${p.id}, '${s.label}', ${s.val})">${s.label}</button>`).join('')}</div>`
     : `<div class="product-sizes"><button class="size-btn active" style="pointer-events:none;cursor:default;">${p.prices[0].label}</button></div>`;
+
   return `
     <div class="product-card fade-up" id="pc-${p.id}">
       <div class="product-img-wrap">
@@ -245,21 +246,22 @@ function productCardHTML(p) {
       </div>
       <div class="product-body">
         <div class="product-name">${p.name}</div>
-        <div class="product-desc">${p.desc}</div>
         <div class="product-meta-row">
           <div class="product-price">
             <span class="price-current" id="price-${p.id}">₹${price.val}</span>
           </div>
+          ${sizeButtons}
         </div>
-        ${sizeButtons}
         <div class="product-actions">
           <div class="qty-wrap">
             <button class="qty-btn" onclick="changeQty('qty-${p.id}', -1)">−</button>
             <input class="qty-val" id="qty-${p.id}" value="1" min="1" max="10" readonly>
             <button class="qty-btn" onclick="changeQty('qty-${p.id}', 1)">+</button>
           </div>
-          <button class="btn-view" onclick="openProductModal(${p.id})">Customise</button>
-          <button class="btn-add" onclick="addToCartFromCard(${p.id})">+ Cart</button>
+          <div class="product-actions-btns">
+            <button class="btn-view" onclick="openProductModal(${p.id})">Customise</button>
+            <button class="btn-add" onclick="addToCartFromCard(${p.id})">+ Cart</button>
+          </div>
         </div>
       </div>
     </div>`;
@@ -302,27 +304,15 @@ function addToCartFromCard(id) {
 }
 
 function addToCart(product, label, val, qty = 1, addons = []) {
-  // Build a unique key that includes selected add-on IDs so the same cake with different add-ons is treated as a separate line item
   const addonKey = addons.map(a => a.id).sort().join('+');
   const key = `${product.id}-${label}${addonKey ? '-' + addonKey : ''}`;
   const addonTotal = addons.reduce((s, a) => s + a.price, 0);
   const totalPrice = val + addonTotal;
-
   const existing = cart.find(c => c.key === key);
   if (existing) {
     existing.qty = Math.min(existing.qty + qty, 10);
   } else {
-    cart.push({
-      key,
-      id: product.id,
-      name: product.name,
-      img: product.img,
-      size: label,
-      price: totalPrice,
-      basePrice: val,
-      addons,
-      qty
-    });
+    cart.push({ key, id: product.id, name: product.name, img: product.img, size: label, price: totalPrice, basePrice: val, addons, qty });
   }
   saveCart();
   updateCartUI();
@@ -485,15 +475,9 @@ function openProductModal(id) {
       <div class="modal-addons-list">
         ${ADDONS.map(a => `
           <label class="addon-row" for="addon-${id}-${a.id}">
-            <input
-              type="checkbox"
-              id="addon-${id}-${a.id}"
-              class="addon-checkbox"
-              data-price="${a.price}"
-              data-name="${a.name}"
-              data-addon-id="${a.id}"
-              onchange="updateModalPrice(${id}, ${p.prices[0].val})"
-            >
+            <input type="checkbox" id="addon-${id}-${a.id}" class="addon-checkbox"
+              data-price="${a.price}" data-name="${a.name}" data-addon-id="${a.id}"
+              onchange="updateModalPrice(${id}, ${p.prices[0].val})">
             <div class="addon-info">
               <span class="addon-name">${a.name}</span>
               <span class="addon-desc">${a.desc}</span>
@@ -508,22 +492,16 @@ function openProductModal(id) {
     <div class="modal-info">
       <div class="modal-name">${p.name}</div>
       <div class="modal-desc">${p.desc}</div>
-
       ${p.prices.length > 1 ? `
       <div>
         <div style="font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;">Select Size</div>
         <div class="product-sizes">
           ${p.prices.map((s, i) => `
-            <button
-              class="size-btn${i === 0 ? ' active' : ''}"
-              data-base="${s.val}"
-              onclick="modalSelectSize(this, '${s.label}', ${s.val}, ${p.id})"
-            >${s.label} — ₹${s.val}</button>`).join('')}
+            <button class="size-btn${i === 0 ? ' active' : ''}" data-base="${s.val}"
+              onclick="modalSelectSize(this, '${s.label}', ${s.val}, ${p.id})">${s.label} — ₹${s.val}</button>`).join('')}
         </div>
       </div>` : ''}
-
       ${addonsHTML}
-
       <div class="modal-price-row">
         <div>
           <div class="modal-price-label">Total Price</div>
@@ -537,7 +515,6 @@ function openProductModal(id) {
           <button class="qty-btn" onclick="changeQty('modal-qty-${p.id}', 1)">+</button>
         </div>
       </div>
-
       <button class="btn-primary full-width modal-add-cart-btn" style="margin-top:4px" onclick="modalAddToCart(${p.id})">
         Add to Cart
       </button>
@@ -546,17 +523,11 @@ function openProductModal(id) {
   document.getElementById('productModalOverlay').classList.add('open');
 }
 
-/* Recompute the displayed price whenever a size or add-on changes */
 function updateModalPrice(id, fallbackBase) {
-  // Find the active base price
   const activeSize = document.querySelector('#productModalInner .size-btn.active');
   const base = activeSize ? parseInt(activeSize.dataset.base || fallbackBase) : fallbackBase;
-
-  // Sum checked add-ons
-  const addonTotal = Array.from(
-    document.querySelectorAll(`#productModalInner .addon-checkbox:checked`)
-  ).reduce((s, cb) => s + parseInt(cb.dataset.price), 0);
-
+  const addonTotal = Array.from(document.querySelectorAll(`#productModalInner .addon-checkbox:checked`))
+    .reduce((s, cb) => s + parseInt(cb.dataset.price), 0);
   document.getElementById(`modal-price-${id}`).textContent = `₹${(base + addonTotal).toLocaleString()}`;
 }
 
@@ -570,21 +541,11 @@ function modalAddToCart(id) {
   const p = PRODUCTS.find(p => p.id === id);
   const qtyEl = document.getElementById(`modal-qty-${id}`);
   const qty = qtyEl ? parseInt(qtyEl.value) : 1;
-
-  // Get selected size
   const activeBtn = document.querySelector('#productModalInner .size-btn.active');
   const sizeLabel = activeBtn ? activeBtn.textContent.split(' — ')[0].trim() : p.prices[0].label;
   const baseVal = activeBtn ? parseInt(activeBtn.dataset.base || p.prices[0].val) : p.prices[0].val;
-
-  // Collect selected add-ons
-  const selectedAddons = Array.from(
-    document.querySelectorAll('#productModalInner .addon-checkbox:checked')
-  ).map(cb => ({
-    id: cb.dataset.addonId,
-    name: cb.dataset.name,
-    price: parseInt(cb.dataset.price)
-  }));
-
+  const selectedAddons = Array.from(document.querySelectorAll('#productModalInner .addon-checkbox:checked'))
+    .map(cb => ({ id: cb.dataset.addonId, name: cb.dataset.name, price: parseInt(cb.dataset.price) }));
   addToCart(p, sizeLabel, baseVal, qty, selectedAddons);
   closeProductModal();
 }
@@ -609,14 +570,12 @@ function closeLightbox() {
 }
 
 /* ========== TESTIMONIALS ========== */
-/* ========== TESTIMONIALS ========== */
 function getTestimonialsPerPage() {
   return window.innerWidth < 768 ? 1 : 3;
 }
 
 function renderTestimonials() {
   const track = document.getElementById('testimonialsTrack');
-
   track.innerHTML = TESTIMONIALS.map(t => `
     <div class="testimonial-card">
       <div class="test-stars">${'⭐'.repeat(t.rating)}</div>
@@ -630,7 +589,6 @@ function renderTestimonials() {
   const dots = document.getElementById('testimonialDots');
   const perPage = getTestimonialsPerPage();
   const pages = Math.ceil(TESTIMONIALS.length / perPage);
-
   dots.innerHTML = Array.from({ length: pages }, (_, i) =>
     `<button class="dot${i === 0 ? ' active' : ''}" onclick="goToTestimonial(${i})"></button>`
   ).join('');
@@ -646,32 +604,17 @@ function startTestimonialCarousel() {
 
 function goToTestimonial(idx) {
   testimonialIndex = idx;
-
   const cards = document.querySelectorAll('.testimonial-card');
   const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 0;
   const perPage = getTestimonialsPerPage();
-
-  document.getElementById('testimonialsTrack').style.transform =
-    `translateX(-${idx * perPage * cardWidth}px)`;
-
-  document.querySelectorAll('#testimonialDots .dot').forEach((d, i) =>
-    d.classList.toggle('active', i === idx)
-  );
+  document.getElementById('testimonialsTrack').style.transform = `translateX(-${idx * perPage * cardWidth}px)`;
+  document.querySelectorAll('#testimonialDots .dot').forEach((d, i) => d.classList.toggle('active', i === idx));
 }
 
 window.addEventListener('resize', () => {
   renderTestimonials();
   goToTestimonial(0);
 });
-/* ========== FAQ ========== */
-function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const answer = item.querySelector('.faq-a');
-  const isOpen = answer.classList.contains('open');
-  document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
-  document.querySelectorAll('.faq-q.open').forEach(q => q.classList.remove('open'));
-  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
-}
 
 /* ========== CUSTOM ORDER ========== */
 function submitCustomOrder() {
@@ -706,10 +649,7 @@ function showToast(message, type = 'success') {
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
