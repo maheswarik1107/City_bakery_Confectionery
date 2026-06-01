@@ -711,3 +711,14 @@ document.addEventListener('keydown', e => {
     if (searchBar.classList.contains('open')) toggleSearch();
   }
 });
+function goToCategory(filterValue) {
+  window.location.hash = '#products';
+  setTimeout(() => {
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => {
+      if (tab.getAttribute('onclick').includes(`'${filterValue}'`)) {
+        tab.click();
+      }
+    });
+  }, 150);
+}
