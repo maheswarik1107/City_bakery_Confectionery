@@ -13,39 +13,39 @@ const ADDONS = [
 /* ========== PRODUCT DATA ========== */
 const PRODUCTS = [
   // FRESH CREAM
-  { id: 1, name: 'Strawberry Cake', cat: 'fresh-cream', desc: 'Fresh cream with luscious strawberries', img: 'gallery/Strawberry Cake.webp', prices: [{ label: '500gm', val: 330 }, { label: '1kg', val: 650 }], badge: 'Popular' },
-  { id: 2, name: 'Mango Cream Cake', cat: 'fresh-cream', desc: 'Tropical mango with fresh cream layers', img: 'gallery/Mango Cream Cake.webp', prices: [{ label: '500gm', val: 330 }, { label: '1kg', val: 650 }] },
-  { id: 3, name: 'Blueberry Cake', cat: 'fresh-cream', desc: 'Bursting blueberries in silky cream', img: 'gallery/Blueberry Cake.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
-  { id: 4, name: 'Butterscotch Cake', cat: 'fresh-cream', desc: 'Classic butterscotch with nutty crunch', img: 'gallery/Butterscotch Cake.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }], badge: 'Bestseller' },
-  { id: 5, name: 'Rasamalai Cake', cat: 'fresh-cream', desc: 'Unique fusion of rasamalai & cream', img: 'gallery/Rasamalai Cake.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
-  { id: 6, name: 'Mixed Fruit Cake', cat: 'fresh-cream', desc: 'Seasonal fresh fruits on cream base', img: 'gallery/Mixed Fruit Cake.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 880 }] },
-  { id: 7, name: 'Vanilla Cream Cake', cat: 'fresh-cream', desc: 'Light, airy classic vanilla fresh cream', img: 'gallery/Vanilla Cream Cake.webp', prices: [{ label: '500gm', val: 280 }, { label: '1kg', val: 440 }] },
+  { id: 1, name: 'Strawberry Cake', cat: 'fresh-cream', desc: 'Fresh cream with luscious strawberries', img: 'gallery/Strawberry Cake.webp', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }], badge: 'Popular' },
+  { id: 2, name: 'Mango Cream Cake', cat: 'fresh-cream', desc: 'Tropical mango with fresh cream layers', img: 'gallery/Mango Cream Cake.webp', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
+  { id: 3, name: 'Blueberry Cake', cat: 'fresh-cream', desc: 'Bursting blueberries in silky cream', img: 'gallery/Blueberry Cake.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 4, name: 'Butterscotch Cake', cat: 'fresh-cream', desc: 'Classic butterscotch with nutty crunch', img: 'gallery/Butterscotch Cake.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
+  { id: 5, name: 'Rasamalai Cake', cat: 'fresh-cream', desc: 'Unique fusion of rasamalai & cream', img: 'gallery/Rasamalai Cake.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 6, name: 'Mixed Fruit Cake', cat: 'fresh-cream', desc: 'Seasonal fresh fruits on cream base', img: 'gallery/Mixed Fruit Cake.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 7, name: 'Vanilla Cream Cake', cat: 'fresh-cream', desc: 'Light, airy classic vanilla fresh cream', img: 'gallery/Vanilla Cream Cake.webp', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
 
   // PREMIUM
-  { id: 8, name: 'White Forest Cake', cat: 'premium', desc: 'White chocolate with cherries & cream', img: 'gallery/White Forest Cake.webp', prices: [{ label: '500gm', val: 330 }, { label: '1kg', val: 650 }] },
-  { id: 9, name: 'Red Velvet Cake', cat: 'premium', desc: 'Iconic red velvet with cream cheese frosting', img: 'gallery/Red Velvet Cake.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 870 }], badge: 'Premium' },
-  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 980 }], badge: 'Special' },
-  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.webp', prices: [{ label: '500gm', val: 280 }, { label: '1kg', val: 440 }] },
+  { id: 8, name: 'White Forest Cake', cat: 'premium', desc: 'White chocolate with cherries & cream', img: 'gallery/White Forest Cake.webp', prices: [{ label: '500gm', val: 300 }, { label: '1kg', val: 600 }] },
+  { id: 9, name: 'Red Velvet Cake', cat: 'premium', desc: 'Iconic red velvet with cream cheese frosting', img: 'gallery/Red Velvet Cake.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Premium' },
+  { id: 10, name: 'Oreo Red Velvet', cat: 'premium', desc: 'Red velvet loaded with Oreo crumbs', img: 'gallery/Oreo Red Velvet.webp', prices: [{ label: '500gm', val: 450 }, { label: '1kg', val: 900 }], badge: 'Special' },
+  { id: 11, name: 'Black Forest Cake', cat: 'premium', desc: 'Dark chocolate with cherries & cream', img: 'gallery/Black Forest Cake.webp', prices: [{ label: '500gm', val: 250 }, { label: '1kg', val: 400 }] },
 
   // CHOCOLATE
-  { id: 12, name: 'Choco Scotch', cat: 'chocolate', desc: 'Chocolate meets butterscotch heaven', img: 'gallery/Choco Scotch.webp', prices: [{ label: '500gm', val: 420 }, { label: '1kg', val: 830 }] },
-  { id: 13, name: 'Choco Fudge Cake', cat: 'chocolate', desc: 'Dense, rich chocolate fudge layers', img: 'gallery/Choco Fudge Cake.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 950 }], badge: 'Fav' },
-  { id: 14, name: 'Brownie Blast Cake', cat: 'chocolate', desc: 'Fudgy brownie chunks in every bite', img: 'gallery/Brownie Blast Cake.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 880 }] },
-  { id: 15, name: 'Choco Dry Fruit & Nuts', cat: 'chocolate', desc: 'Chocolate packed with premium nuts', img: 'gallery/Choco Dry Fruit & Nuts.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 980 }], badge: 'Premium' },
-  { id: 16, name: 'Choco Truffle', cat: 'chocolate', desc: 'Silky smooth chocolate truffle ganache', img: 'gallery/Choco Truffle.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
-  { id: 17, name: 'Choco Mango', cat: 'chocolate', desc: 'Chocolate & mango tropical fusion', img: 'gallery/Choco Mango.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }] },
-  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 950 }] },
-  { id: 19, name: 'Choco Oreo', cat: 'chocolate', desc: 'Chocolate cake crowned with Oreos', img: 'gallery/Choco Oreo.webp', prices: [{ label: '500gm', val: 380 }, { label: '1kg', val: 760 }], badge: 'Bestseller' },
-  { id: 20, name: 'Choco Kit Kat', cat: 'chocolate', desc: 'Wrapped in Kit Kat bars all around', img: 'gallery/Choco Kit Kat.webp', prices: [{ label: '500gm', val: 550 }, { label: '1kg', val: 1040 }], badge: 'Trending' },
-  { id: 21, name: 'Choco Cashew Overloaded', cat: 'chocolate', desc: 'Loaded with cashews & chocolate', img: 'gallery/Choco Cashew Overloaded.webp', prices: [{ label: '500gm', val: 440 }, { label: '1kg', val: 880 }] },
-  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.webp', prices: [{ label: '500gm', val: 480 }, { label: '1kg', val: 940 }], badge: 'Bestseller' },
-  { id: 23, name: 'Pinata Cake', cat: 'special', desc: 'Surprise-filled cake for extra fun!', img: 'gallery/pinata.webp', prices: [{ label: '500gm', val: 700 }, { label: '1kg', val: 1400 }], badge: 'Hit!' },
+  { id: 12, name: 'Choco Scotch', cat: 'chocolate', desc: 'Chocolate meets butterscotch heaven', img: 'gallery/Choco Scotch.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 13, name: 'Choco Fudge Cake', cat: 'chocolate', desc: 'Dense, rich chocolate fudge layers', img: 'gallery/Choco Fudge Cake.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Fav' },
+  { id: 14, name: 'Brownie Blast Cake', cat: 'chocolate', desc: 'Fudgy brownie chunks in every bite', img: 'gallery/Brownie Blast Cake.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 15, name: 'Choco Dry Fruit & Nuts', cat: 'chocolate', desc: 'Chocolate packed with premium nuts', img: 'gallery/Choco Dry Fruit & Nuts.webp', prices: [{ label: '500gm', val: 450 }, { label: '1kg', val: 900 }], badge: 'Premium' },
+  { id: 16, name: 'Choco Truffle', cat: 'chocolate', desc: 'Silky smooth chocolate truffle ganache', img: 'gallery/Choco Truffle.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 17, name: 'Choco Mango', cat: 'chocolate', desc: 'Chocolate & mango tropical fusion', img: 'gallery/Choco Mango.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }] },
+  { id: 18, name: 'Choco Almond', cat: 'chocolate', desc: 'Rich chocolate with toasted almonds', img: 'gallery/Choco Almond.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 19, name: 'Choco Oreo', cat: 'chocolate', desc: 'Chocolate cake crowned with Oreos', img: 'gallery/Choco Oreo.webp', prices: [{ label: '500gm', val: 350 }, { label: '1kg', val: 700 }], badge: 'Bestseller' },
+  { id: 20, name: 'Choco Kit Kat', cat: 'chocolate', desc: 'Wrapped in Kit Kat bars all around', img: 'gallery/Choco Kit Kat.webp', prices: [{ label: '500gm', val: 500 }, { label: '1kg', val: 950 }], badge: 'Trending' },
+  { id: 21, name: 'Choco Cashew Overloaded', cat: 'chocolate', desc: 'Loaded with cashews & chocolate', img: 'gallery/Choco Cashew Overloaded.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }] },
+  { id: 22, name: 'Choco Chips Cake', cat: 'chocolate', desc: 'Moist cake loaded with choco chips', img: 'gallery/Choco Chips Cake.webp', prices: [{ label: '500gm', val: 400 }, { label: '1kg', val: 800 }], badge: 'Bestseller' },
+  { id: 23, name: 'Pinata Cake', cat: 'special', desc: 'Surprise-filled cake for extra fun!', img: 'gallery/pinata.webp', prices: [{ label: '500gm', val: 600 }, { label: '1kg', val: 1200 }], badge: 'Hit!' },
 
   // BUTTER CREAM
-  { id: 24, name: 'Vanilla Butter Cream', cat: 'butter-cream', desc: 'Classic vanilla with silky butter cream', img: 'gallery/Vanilla Butter Cream.webp', prices: [{ label: '1kg', val: 440 }] },
-  { id: 25, name: 'Chocolate Butter Cream', cat: 'butter-cream', desc: 'Rich chocolate butter cream delight', img: 'gallery/Chocolate Butter Cream.webp', prices: [{ label: '1kg', val: 440 }] },
-  { id: 26, name: 'Butterscotch Butter Cream', cat: 'butter-cream', desc: 'Sweet butterscotch with creamy frosting', img: 'gallery/Butterscotch Butter Cream.jpg', prices: [{ label: '1kg', val: 440 }] },
-  { id: 27, name: 'Honey Cake', cat: 'butter-cream', desc: 'Drizzled with pure natural honey', img: 'gallery/Honey Cake.webp', prices: [{ label: '1kg', val: 700 }], badge: 'Special' },
+  { id: 24, name: 'Vanilla Butter Cream', cat: 'butter-cream', desc: 'Classic vanilla with silky butter cream', img: 'gallery/Vanilla Butter Cream.webp', prices: [{ label: '1kg', val: 400 }] },
+  { id: 25, name: 'Chocolate Butter Cream', cat: 'butter-cream', desc: 'Rich chocolate butter cream delight', img: 'gallery/Chocolate Butter Cream.webp', prices: [{ label: '1kg', val: 400 }] },
+  { id: 26, name: 'Butterscotch Butter Cream', cat: 'butter-cream', desc: 'Sweet butterscotch with creamy frosting', img: 'gallery/Butterscotch Butter Cream.jpg', prices: [{ label: '1kg', val: 400 }] },
+  { id: 27, name: 'Honey Cake', cat: 'butter-cream', desc: 'Drizzled with pure natural honey', img: 'gallery/Honey Cake.webp', prices: [{ label: '1kg', val: 600 }], badge: 'Special' },
 ];
 
 const TESTIMONIALS = [
@@ -248,7 +248,8 @@ function productCardHTML(p) {
         <div class="product-name">${p.name}</div>
         <div class="product-meta-row">
           <div class="product-price">
-            <span class="price-current" id="price-${p.id}">₹${price.val}</span>
+            
+            <span class="price-current price-${p.id}">₹${price.val}</span>
           </div>
           ${sizeButtons}
         </div>
@@ -274,7 +275,9 @@ function selectSize(btn, id, label, val) {
   btn.classList.add('active');
   btn.dataset.activePrice = val;
   btn.dataset.activeLabel = label;
-  document.getElementById(`price-${id}`).textContent = `₹${val}`;
+  document.querySelectorAll(`.price-${id}`).forEach(el => {
+    el.textContent = `₹${val}`;
+  });
 }
 
 function getActiveSize(id) {
