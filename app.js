@@ -593,7 +593,7 @@ function renderTestimonials() {
   const perPage = getTestimonialsPerPage();
   const pages = Math.ceil(TESTIMONIALS.length / perPage);
   dots.innerHTML = Array.from({ length: pages }, (_, i) =>
-    `<button class="dot${i === 0 ? ' active' : ''}" onclick="goToTestimonial(${i})"></button>`
+    `<button class="dot${i === 0 ? ' active' : ''}" aria-label="Go to testimonial page ${i + 1}" onclick="goToTestimonial(${i})"></button>`
   ).join('');
 }
 
