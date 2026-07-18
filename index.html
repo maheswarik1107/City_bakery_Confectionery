@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="OV0VjBfnEqYc1ZkFzae-5oDDDPsATJ4pS35G1s63jsg" />
 
   <title>City Bakery Chennai | Birthday Cakes & Custom Cakes</title>
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://www.citybakeryecr.in/" />
 
   <meta name="description"
     content="City Bakery & Confectionery in Chennai offers fresh birthday cakes, custom cakes, pastries and desserts. Order premium cakes online through WhatsApp.">
@@ -20,6 +32,12 @@
   <meta property="og:image" content="gallery/logo-main.webp">
   <meta property="og:type" content="website">
 
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="City Bakery & Confectionery | Fresh Cakes in Chennai">
+  <meta name="twitter:description" content="Fresh birthday cakes, custom cakes, pastries and desserts in Chennai. Order through WhatsApp.">
+  <meta name="twitter:image" content="https://www.citybakeryecr.in/gallery/logo-main.webp">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -29,6 +47,74 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Local Business / Identity Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "City Bakery & Confectionery",
+    "image": "https://www.citybakeryecr.in/gallery/logo-main.webp",
+    "url": "https://www.citybakeryecr.in/",
+    "telephone": "+91-7373730309",
+    "priceRange": "₹₹",
+    "servesCuisine": "Bakery, Desserts, Cakes",
+    "sameAs": [
+      "https://www.instagram.com/citybakery_confectionery"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "22:00"
+    },
+    "department": [
+      {
+        "@type": "Bakery",
+        "name": "City Bakery & Confectionery - Neelankarai",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3/462, Pandiyan Salai, Neelankarai",
+          "addressLocality": "Chennai",
+          "postalCode": "600115",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Bakery",
+        "name": "City Bakery & Confectionery - Kottivakkam",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "OMR Road, Kottivakkam",
+          "addressLocality": "Chennai",
+          "postalCode": "600041",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Bakery",
+        "name": "City Bakery & Confectionery - Injambakkam",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ECR Road, Injambakkam",
+          "addressLocality": "Chennai",
+          "postalCode": "600115",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Bakery",
+        "name": "City Bakery & Confectionery - Kandhanchavadi",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Veeramani Salai, Kandanchavadi, Perungudi",
+          "addressLocality": "Chennai",
+          "addressCountry": "IN"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -658,15 +744,15 @@
     </div>
     <div class="cart-items" id="cartItems">
       <div class="cart-empty" id="cartEmpty">
-        <div style="font-size:3rem;">🛒</div>
+        <div class="cart-empty-icon">🛒</div>
         <p>Your cart is empty</p>
-        <a href="#products" onclick="toggleCart()" class="btn-primary" style="margin-top:1rem;">Browse Menu</a>
+        <a href="#products" onclick="toggleCart()" class="btn-primary mt-1rem">Browse Menu</a>
       </div>
     </div>
     <div class="cart-footer" id="cartFooter" style="display:none">
       <div class="cart-total"><span>Subtotal:</span><strong id="cartTotal">₹0</strong></div>
       <button class="btn-primary full-width" onclick="proceedToCheckout()">Proceed to Checkout</button>
-      <button class="btn-whatsapp full-width" style="margin-top:0.75rem" onclick="orderViaWhatsApp()">
+      <button class="btn-whatsapp full-width mt-075rem" onclick="orderViaWhatsApp()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path
             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />

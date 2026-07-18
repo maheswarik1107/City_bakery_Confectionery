@@ -1007,3 +1007,10 @@ input, textarea, select, button { font-family: inherit; }
   .mh-small-2 { width: 104px; height: 104px; }
   .mh-badge { font-size: 0.72rem; padding: 8px 12px; }
 }
+.modal-add-cart-btn { margin-top: 4px; }
+
+/* ===== ADDED: replacements for removed inline styles ===== */
+.cart-empty-icon { font-size: 3rem; }
+.mt-1rem { margin-top: 1rem; }
+.mt-075rem { margin-top: 0.75rem; }
+.checkout-summary-title { font-weight: 700; margin-bottom: 8px; font-family: 'Playfair Display', serif; }

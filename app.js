@@ -400,7 +400,7 @@ function proceedToCheckout() {
   document.getElementById('cartSidebar').classList.remove('open');
   document.getElementById('cartOverlay').classList.remove('open');
   const summary = document.getElementById('checkoutSummary');
-  summary.innerHTML = `<div style="font-weight:700;margin-bottom:8px;font-family:'Playfair Display',serif;">Order Summary</div>` +
+  summary.innerHTML = `<div class="checkout-summary-title">Order Summary</div>` +
     cart.map(c => {
       const addonNote = c.addons && c.addons.length ? ` + ${c.addons.map(a => a.name).join(', ')}` : '';
       return `<div class="checkout-summary-item"><span>${c.name} (${c.size})${addonNote} × ${c.qty}</span><span>₹${(c.price * c.qty).toLocaleString()}</span></div>`;
@@ -518,7 +518,7 @@ function openProductModal(id) {
           <button class="qty-btn" onclick="changeQty('modal-qty-${p.id}', 1)">+</button>
         </div>
       </div>
-      <button class="btn-primary full-width modal-add-cart-btn" style="margin-top:4px" onclick="modalAddToCart(${p.id})">
+      <button class="btn-primary full-width modal-add-cart-btn" onclick="modalAddToCart(${p.id})">
         Add to Cart
       </button>
     </div>`;

@@ -1,0 +1,19 @@
+# City Bakery & Confectionery
+
+> Bakery in Chennai offering fresh birthday cakes, custom cakes, pastries and desserts, with delivery and pickup across 4 branches.
+
+## About
+City Bakery & Confectionery has been serving Chennai since 2015 with fresh cream cakes, chocolate cakes, premium cakes, and custom-designed celebration cakes.
+
+## Branches
+- Neelankarai: 3/462, Pandiyan Salai, Chennai - 600115
+- Kottivakkam: OMR Road, Kottivakkam, Chennai - 600041
+- Injambakkam: ECR Road, Injambakkam, Chennai - 600115
+- Kandhanchavadi: Veeramani Salai, Kandanchavadi, Perungudi, Chennai
+
+## Contact
+Phone/WhatsApp: +91 7373730309
+Hours: 9:00 AM - 10:00 PM, All Days
+
+## Ordering
+Orders can be placed via WhatsApp or the website's online ordering cart.
