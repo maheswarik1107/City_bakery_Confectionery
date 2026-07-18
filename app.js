@@ -497,7 +497,7 @@ function openProductModal(id) {
       <div class="modal-desc">${p.desc}</div>
       ${p.prices.length > 1 ? `
       <div>
-        <div style="font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;">Select Size</div>
+        <div class="modal-size-label">Select Size</div>
         <div class="product-sizes">
           ${p.prices.map((s, i) => `
             <button class="size-btn${i === 0 ? ' active' : ''}" data-base="${s.val}"

@@ -1009,6 +1009,16 @@ input, textarea, select, button { font-family: inherit; }
 }
 .modal-add-cart-btn { margin-top: 4px; }
 
+
+.modal-size-label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
 /* ===== ADDED: replacements for removed inline styles ===== */
 .cart-empty-icon { font-size: 3rem; }
 .mt-1rem { margin-top: 1rem; }
