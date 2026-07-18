@@ -256,7 +256,7 @@ function productCardHTML(p) {
         <div class="product-actions">
           <div class="qty-wrap">
             <button class="qty-btn" onclick="changeQty('qty-${p.id}', -1)">−</button>
-            <input class="qty-val" id="qty-${p.id}" value="1" min="1" max="10" readonly>
+            <input class="qty-val" id="qty-${p.id}" aria-label="Quantity" value="1" min="1" max="10" readonly>
             <button class="qty-btn" onclick="changeQty('qty-${p.id}', 1)">+</button>
           </div>
           <div class="product-actions-btns">
@@ -514,7 +514,7 @@ function openProductModal(id) {
         </div>
         <div class="qty-wrap">
           <button class="qty-btn" onclick="changeQty('modal-qty-${p.id}', -1)">−</button>
-          <input class="qty-val" id="modal-qty-${p.id}" value="1" min="1" max="10" readonly>
+          <input class="qty-val" id="modal-qty-${p.id}" aria-label="Quantity" value="1" min="1" max="10" readonly>
           <button class="qty-btn" onclick="changeQty('modal-qty-${p.id}', 1)">+</button>
         </div>
       </div>
